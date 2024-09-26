@@ -9822,3 +9822,13 @@ textarea.form-control {
   .footer .credit span{
       color:var(--orange);
   }
+
+  /* Footer */
+.foooter{
+  display: flex;
+  height: 100px;
+  flex-direction: column;
+  background-color: var(--gray-dark);
+  align-items: center;
+  justify-content: center;
+}

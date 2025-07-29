@@ -1,78 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/contact.css">
-    <title>Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Arun Kumar</title>
+
+  <!-- Fonts and Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Arun Kumar</a>
-            <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="oi oi-menu"></span> Menu
-            </button>
-        </div>
-    </nav>
-    <div class="contact-container">
-        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left" id="contactForm">
-            <div class="contact-left-title">
-                <h2>Get in touch</h2>
-                <hr>
-            </div>
-            <input type="hidden" name="access_key" value="a2ce4f40-179a-4902-a6b9-bcb24823935f">
-            <input type="text" name="name" placeholder="Your name" class="contact-inputs" required>
-            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
-            <textarea name="message" placeholder="Your Question ?" class="contact-inputs" required></textarea>
-            <button type="submit">Submit <img src="images/arrow_icon.png" alt=""></button>
-        </form>
-        <div class="contact-right">
-            <img src="images/right_img.png" alt="">
-        </div>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="brand">Arun Kumar</div>
+    <ul>
+      <li><a href="index.html#home-section">Home</a></li>
+      <li><a href="index.html#about-section">About</a></li>
+      <li><a href="index.html#skills-section">Skills</a></li>
+      <li><a href="index.html#project-section">Projects</a></li>
+      <li><a href="index.html#resume-section">Resume</a></li>
+      <li><a href="index.html#contact-section" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contact Section -->
+  <div class="contact-container">
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-left" id="contactForm">
+      <div class="contact-left-title">
+        <h2>Get in Touch</h2>
+        <hr />
+      </div>
+      <input type="hidden" name="access_key" value="a2ce4f40-179a-4902-a6b9-bcb24823935f" />
+      <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required />
+      <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required />
+      <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+      <button type="submit">Submit <i class="fas fa-paper-plane"></i></button>
+    </form>
+
+    <div class="contact-right">
+      <img src="images/Contact.png" alt="Contact Illustration" />
     </div>
-    <footer class="foooter">
-        <div class="foooter-bottom"></div>
-        <p>&copy; 2024 Arun Kumar. All rights reserved.</p>
-        </div>
-        <div class="btn09"><a href="index.html">Go To Home Page</a></div>
-    </footer>
-    <script>
-      document.getElementById('contactForm').addEventListener('submit', function(event) {
-          event.preventDefault();
+  </div>
 
-          const formData = new FormData(this);
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Arun Kumar. All rights reserved.</p>
+    <div class="btn09"><a href="index.html">Go To Home Page</a></div>
+  </footer>
 
-          fetch('https://api.web3forms.com/submit', {
-              method: 'POST',
-              body: formData,
-              mode: 'cors'
-          })
-          .then(response => response.json())
-          .then(data => {
-              if (data.success) {
-                  window.location.href = 'success.html';
-              } else {
-                  alert('An error occurred. Please try again.');
-              }
-          })
-          .catch(error => {
-              console.error('Error:', error);
-              alert('An error occurred. Please try again.');
-          });
+  <!-- JS Submission -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const formData = new FormData(this);
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+        mode: 'cors'
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          window.location.href = 'success.html';
+        } else {
+          alert('An error occurred. Please try again.');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again.');
       });
+    });
   </script>
 </body>
 </html>

@@ -275,3 +275,23 @@
 
 })(jQuery);
 
+// Project hover video play
+document.querySelectorAll(".project-card").forEach(card => {
+  const video = card.querySelector(".project-video");
+  const image = card.querySelector(".project-image");
+
+  card.addEventListener("mouseenter", () => {
+    image.style.opacity = "0";
+    video.style.display = "block";
+    video.currentTime = 0;
+		video.muted=false;
+    video.play();
+  });
+
+  card.addEventListener("mouseleave", () => {
+    video.pause();
+    video.style.display = "none";
+    image.style.opacity = "1";
+  });
+});
+// End of project hover video play

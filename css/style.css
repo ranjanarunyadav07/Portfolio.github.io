@@ -9799,3 +9799,35 @@ footer {
     .btn09 a:hover {
       background: #e0aa1f;
     }
+
+    /* Project hover video effect */
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* image */
+.project-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.4s ease;
+}
+
+/* video */
+.project-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+.project-card:hover .project-image {
+  opacity: 0;
+}
+.project-card:hover .project-video {
+  display: block;
+}
